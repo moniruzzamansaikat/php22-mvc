@@ -9,9 +9,8 @@ $router = new Router();
 
 // Example routes
 $router->addRoute('GET', '/', [HomeController::class, 'index']);
-$router->addRoute('GET', '/products', [ProductController::class, 'index']);
 $router->addRoute('GET', '/users', [UserController::class, 'index']);
-$router->addRoute('GET', '/users/create', [UserController::class, 'create']);
+$router->addRoute('GET', '/users/json', [UserController::class, 'getJson']);
 $router->addRoute('POST', '/users', [UserController::class, 'store']);
 
 // Dispatch the router

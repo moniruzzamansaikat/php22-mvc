@@ -17,7 +17,7 @@
       <ul class="navbar-nav ms-auto">
         <a class="nav-link" href="/">Home</a>
         <a class="nav-link" href="/users">Users</a>
-        <a class="nav-link" href="/products">Products Json</a>
+        <a class="nav-link" href="/users/json">Users Json</a>
       </ul>
   </nav>
   </div>

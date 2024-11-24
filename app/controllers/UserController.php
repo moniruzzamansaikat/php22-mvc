@@ -19,9 +19,11 @@ class UserController extends BaseController
         ]);
     }
 
-    public function create()
+    public function getJson()
     {
-        $this->render('users/create');
+        $users = db()->tbl('users')->select()->get();
+        
+        return $this->json($users);
     }
 
     public function store(Request $request)

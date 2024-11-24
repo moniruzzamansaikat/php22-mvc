@@ -17,13 +17,13 @@
       <ul class="navbar-nav ms-auto">
         <a class="nav-link" href="/">Home</a>
         <a class="nav-link" href="/users">Users</a>
-        <a class="nav-link" href="/users/json">Users Json</a>
+        <a class="nav-link" href="/products">Products Json</a>
       </ul>
   </nav>
   </div>
 
   <main class="container">
-    #yield('content')
+    <h1>Home Page</h1>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
