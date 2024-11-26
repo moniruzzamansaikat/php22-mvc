@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2bf7ed1be6f10415f49533b913f980a9",
+    "content-hash": "04e3464d2c538cd74848e5e6a4210053",
     "packages": [
         {
-            "name": "php22/framework",
-            "version": "1.0.0",
+            "name": "monirsaikat/php22",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "../framework",
-                "reference": "c2535562dd2720c29e0af3a891adb03823f416e3"
+                "reference": "6da6c11c5957173fda23f1f202598afa0221d5f1"
             },
             "type": "library",
             "autoload": {
@@ -24,7 +24,18 @@
                     "src/frame/framework_helpers.php"
                 ]
             },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moniruzzaman Saikat",
+                    "email": "monirsaikat1@gmail.com"
+                }
+            ],
+            "description": "A lightweight PHP framework for custom applications.",
             "transport-options": {
+                "symlink": true,
                 "relative": true
             }
         }
@@ -32,7 +43,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "monirsaikat/php22": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {},

@@ -1,0 +1,13 @@
+:root {
+    --clr-main: #171717;
+}
+
+body {
+    background-color: var(--clr-main);
+    color: #ccc;
+}
+
+.card {
+    background-color: var(--clr-main);
+    color: #ccc;
+}

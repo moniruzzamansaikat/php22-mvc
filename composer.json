@@ -14,10 +14,13 @@
     "repositories": [
         {
             "type": "path",
-            "url": "../framework"
+            "url": "../framework", 
+            "options": {
+                "symlink": true
+            }
         }
     ],
     "require": {
-        "php22/framework": "*"
+        "monirsaikat/php22": "dev-main"
     }
 }

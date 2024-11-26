@@ -1,17 +1,16 @@
 <?php
 
-use App\Controllers\HomeController;
-use App\Controllers\ProductController;
-use App\Controllers\UserController;
-use Php22\Router;
+use App\Middlewars\AuthMiddleware;
 
-$router = new Router();
+router()->setControllerNamespace('App\Controllers');
 
-// Example routes
-$router->addRoute('GET', '/', [HomeController::class, 'index']);
-$router->addRoute('GET', '/users', [UserController::class, 'index']);
-$router->addRoute('GET', '/users/json', [UserController::class, 'getJson']);
-$router->addRoute('POST', '/users', [UserController::class, 'store']);
+router()->prefix('')->middleware([AuthMiddleware::class])->group(function () {
+    router()->controller('HomeController')->get('/', 'index', 'home');
 
-// Dispatch the router
-$router->dispatch();
+    router()->controller('UserController')->prefix('users')->group(function () {
+        router()->get('/', 'index', 'user.get');
+        router()->get('/{id}/delete', 'deleteUser', 'user.delete');
+        router()->get('/json', 'getJson', 'user.json');
+        router()->post('/', 'store', 'user.store');
+    });
+});
